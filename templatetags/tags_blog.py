@@ -1,4 +1,4 @@
-from _include.Chimera.Chimera.models import Author, Blob
+from Chimera.models import Author, Blob
 from django import template
 
 

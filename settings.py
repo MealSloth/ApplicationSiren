@@ -16,7 +16,7 @@ for directory in git_submodules:
 sys.path.append('/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages')
 sys.path.append('/Library/Python/2.7/site-packages')
 print sys.path
-from _include.Chimera.Chimera.databases import databases
+from Chimera.databases import databases
 
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG

@@ -1,4 +1,4 @@
-from _include.Chimera.Chimera.models import ContactEmail, Contact
+from Chimera.models import ContactEmail, Contact
 from django import template
 
 

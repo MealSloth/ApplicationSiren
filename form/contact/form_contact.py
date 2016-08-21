@@ -1,4 +1,4 @@
-from _include.Chimera.Chimera.models import Contact
+from Chimera.models import Contact
 from datetime import datetime
 from django.forms import *
 

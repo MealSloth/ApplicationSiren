@@ -1,7 +1,7 @@
-from _include.Chimera.Chimera.settings import GCS_URL, PROTOCOL
+from Chimera.settings import GCS_URL, PROTOCOL
 from form.contact.form_contact_email import ContactEmailForm
 from django.http import HttpResponse, HttpResponseRedirect
-from _include.Chimera.Chimera.models import BlogPost
+from Chimera.models import BlogPost
 from form.contact.form_contact import ContactForm
 from django.core.urlresolvers import reverse
 from django.template import Context
