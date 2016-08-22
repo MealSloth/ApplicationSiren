@@ -1,22 +1,8 @@
-import sys
+from Chimera.databases import databases
 import os
 
-git_submodules = [
-    '/_include/Chimera/',
-    '/_include/Hydra/',
-]
 
 PROJECT_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-
-for directory in git_submodules:
-    path = os.path.join(directory)
-    if path not in sys.path:
-        sys.path.append(PROJECT_PATH + path)
-
-sys.path.append('/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages')
-sys.path.append('/Library/Python/2.7/site-packages')
-print sys.path
-from Chimera.databases import databases
 
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
@@ -46,7 +32,6 @@ STATICFILES_DIRS = ()
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
 SECRET_KEY = '8!$+&o*#&7kd5zulwvxt6zkeg7&b=mniz7j==usz))82n%&by&'
@@ -54,7 +39,6 @@ SECRET_KEY = '8!$+&o*#&7kd5zulwvxt6zkeg7&b=mniz7j==usz))82n%&by&'
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -63,17 +47,11 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    # Uncomment the next line for simple clickjacking protection:
-    # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
 ROOT_URLCONF = 'Siren.urls'
 
 WSGI_APPLICATION = 'Siren.wsgi.application'
-
-TEMPLATE_DIRS = (
-    os.path.join(PROJECT_PATH, 'Siren/templates'),
-)
 
 INSTALLED_APPS = (
     'django.contrib.auth',
